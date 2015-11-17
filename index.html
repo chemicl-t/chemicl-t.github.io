@@ -18,7 +18,7 @@
 			var md = $("#markdown");
 			
 			$.get(md[0].attributes["src"].value, function(src){
-				md[0].removeChild();
+				md[0].childNodes[0].nodeValue = "";
 				md.append(marked(src));
 			});
 		});
